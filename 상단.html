@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<script src="/js/jquery.bxslider.min.js"></script>
+
+<div id="hdWrap">
+    <div id="header">
+
+        <div class="hd_menu_wrap clear">
+            <div class="hd_menu">
+                <div class="hd_menu_l">
+                    <ul>
+                        <li><a href="<!--/link_favorite/-->"><p>쇼핑몰 즐겨찾기</p></a></li>
+                    </ul>
+                </div>
+                <div class="hd_menu_r">
+                    <ul class="hd-link">
+                        <!--/if_login/-->
+                        <li><a href="<!--/link_logout/-->">로그아웃</a></li>
+                        <li><span class="hdBar">|</span><a href="<!--/link_join/-->">정보수정</a></li>
+                        <!--/else/-->
+                        <li><a href="<!--/link_login/-->">로그인</a></li>
+                        <li class="join">
+                            <span class="hdBar">|</span>
+                            <a href="<!--/link_join/-->">회원가입</a>
+                        </li>
+                        <!--/end_if/-->
+                        <li><span class="hdBar">|</span><a href="<!--/link_order/-->">주문배송</a></li>
+                        <li><span class="hdBar">|</span><a href="/shop/mypage.html?mypage_type=mym2mwrite">1:1 문의하기</a></li>
+                        <li>
+                            <span class="hdBar">|</span>
+                            <a href="<!--/link_mypage/-->">마이페이지 <i class="xi-caret-down-min"></i></a>
+                            <div class="hd-link_sub">
+                                <a href="<!--/link_order/-->">주문배송</a>
+                                <a href="<!--/link_reserve/-->">적립금 </a>
+                                <a href="/shop/mypage.html?mypage_type=mycoupon">할인쿠폰</a>
+                                <a href="/shop/mypage.html?mypage_type=mywishlist">찜한상품</a>
+                                <a href="<!--/link_join/-->">정보수정</a>
+                            </div>
+                        </li>
+                        <li class="btn_topbasket">
+                            <span class="hdBar">|</span>
+                            <a href="<!--/link_basket/-->"><i class="xi-cart-o"></i> 장바구니 <span
+                                    class="btn_topbasket"><!--/user_basket_quantity/--></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hd_logo_wrap clear">
+            <!-- 로고 -->
+            <a href="/"><img src="/design/hacs36/basic/logo.png"></a>
+            <!-- //로고 -->
+            <div class="hd_search">
+                <form action="/shop/shopbrand.html" method="post" name="search">
+                    <fieldset>
+                        <legend>상품 검색 폼</legend>
+                        <input placeholder="찾고자하는 제품을 입력해주세요." name="search" onkeydown="CheckKey_search();" value=""
+                               class="MS_search_word input-keyword">
+                        <a href="javascript:search_submit();"><p>검색하기</p></a>
+                    </fieldset>
+                </form>
+                <span> <!--/ranking_keyword/--></span>
+            </div>
+        </div>
+        <div class="hd_gnb_wrap">
+            <div class="hd_gnb clear">
+                <div class="btn_cate_all"><a href="#none" id="btn-allMenuOpen"><i class="xi-bars"></i>전체상품</a></div>
+                <!-- 전체보기 레이어 -->
+                <div class="allMenu">
+                    <p id="btn-allMenuClose"><i class="xi-close-thin"></i></p>
+                    <div class="allMenuBx">
+                        <div class="allMenuInner">
+                            <div class="allMenuList">
+                                <!--/loop_category1/-->
+                                <dl>
+                                    <dt><a href="<!--/category1@link/-->"><!--/category1@name/--></a></dt>
+                                    <!--/if_category1@category2/-->
+                                    <!--/loop_category1@category2/-->
+                                    <dd><a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a></dd>
+                                    <!--/end_loop/-->
+                                    <!--/end_if/-->
+                                </dl>
+                            <!--/if_idx(6)/-->
+                            </div>
+                            <div class="allMenuList">
+                                <!--/end_if/-->
+                                <!--/end_loop/-->
+<!--                                <dl>-->
+<!--                                    <dt><a href="#">COMMUNITY</a></dt>-->
+<!--                                    &lt;!&ndash;/loop_list_board/&ndash;&gt;-->
+<!--                                    <dd><a href="&lt;!&ndash;/list_board@link/&ndash;&gt;">&lt;!&ndash;/list_board@board_name/&ndash;&gt;</a></dd>-->
+<!--                                    &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                </dl>-->
+<!--                                <dl>-->
+<!--                                    <dt><a href="&lt;!&ndash;/link_mypage/&ndash;&gt;">MYPAGE</a></dt>-->
+<!--                                    <dd><a href="&lt;!&ndash;/link_join/&ndash;&gt;">내정보</a></dd>-->
+<!--                                    <dd><a href="&lt;!&ndash;/link_order/&ndash;&gt;">주문/배송</a></dd>-->
+<!--                                    <dd><a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰내역</a></dd>-->
+<!--                                    <dd><a href="&lt;!&ndash;/link_reserve/&ndash;&gt;">적립금내역</a></dd>-->
+<!--                                    <dd><a href="/shop/mypage.html?mypage_type=mywishlist">관심상품</a></dd>-->
+<!--                                    <dd><a href="/shop/todaygoods.html">최근본상품</a></dd>-->
+<!--                                </dl>-->
+                            </div>
+                        </div><!-- //inner -->
+                    </div><!-- //allMenuBx -->
+                </div><!-- //allMenu -->
+                <!-- //전체보기 레이어 -->
+
+                <!-- 카테고리 -->
+                <!--/loop_category1(6)/-->
+                <dl class="ct_top">
+                    <dt><a href="<!--/category1@link/-->"><!--/category1@name/--></a></dt>
+                    <!--/if_category1@category2/-->
+                    <div class="category2">
+                        <!--/loop_category1@category2/-->
+                        <dd><a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a></dd>
+                        <!--/end_loop/-->
+                    </div>
+                    <!--/end_if/-->
+                </dl>
+                <!--/end_loop/-->
+                <!-- // 카테고리 -->
+            </div>
+        </div>
+
+    </div>
+</div><!-- #hdWrap -->
+
+
+<!--&lt;!&ndash; 우측 고정 메뉴 &ndash;&gt;-->
+<!--<div class="rightFixMenu header">-->
+<!--    <ul class="listWrap">-->
+<!--        <li class="list"><a href="&lt;!&ndash;/link_home/&ndash;&gt;" class="link" title="홈으로"><i class="xi-home"></i></a></li>-->
+<!--        <li class="list"><a href="&lt;!&ndash;/link_basket/&ndash;&gt;" class="link" title="장바구니"><i class="xi-cart"></i></a></li>-->
+<!--        <li class="list"><a href="/shop/todaygoods.html" class="link" title="오늘 본 상품"><i class="xi-eye"></i></a></li>-->
+<!--        <li class="list"><a href="&lt;!&ndash;/link_favorite/&ndash;&gt;" class="link" title="즐겨찾기 추가"><i class="xi-star"></i></a></li>-->
+<!--        <li class="list"><a href="&lt;!&ndash;/link_search_button/&ndash;&gt;" class="link" title="상품검색"><i class="xi-search"></i></a></li>-->
+<!--        <li class="list"><a href="#none" class="link" title="인스타그램"><i class="xi-instagram"></i></a></li>-->
+<!--        <li class="list"><a href="#none" class="link" title="네이버 블로그"><i class="xi-naver"></i></a></li>-->
+<!--        <li class="list"><a href="#none" class="link" title="페이스북"><i class="xi-facebook"></i></a></li>-->
+<!--        <li class="list"><a href="#" class="link moveTop" title="맨 위로 이동"><i class="xi-angle-up-min"></i></a></li>-->
+<!--    </ul>-->
+<!--</div>-->
+

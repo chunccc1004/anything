@@ -1,0 +1,409 @@
+<!--/script_scroll(1)/-->
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <!-- 메인시작 -->
+    <div id="contentWrapper">
+        <div id="columWrap">
+            <div class="columBg">
+                <div class="leftCol">
+                    <!-- 카테고리 -->
+                    <ul class="ct_left">
+                        <li><a href="">인기 상품</a></li>
+                        <li><a href="">계절 상품</a></li>
+                        <li><a href="/board/board.html?code=<!--/shop_id/-->">공지 사항</a></li>
+                        <li><a href="">회사 소개</a></li>
+                        <li><a href="/shop/mypage.html?mypage_type=mym2mwrite">1:1 문의하기</a></li>
+                    </ul>
+                    <!-- // 카테고리 -->
+                </div>
+                <!-- 메인 슬라이드 배너 시작 -->
+                <div class="right_static_banner">
+                    <img src="/design/hacs36/basic/main_banner.png">
+                </div>
+<!--                <div class="rightCol">-->
+<!--                    <div class="sliderWrap mainSliderWrap" style="height:0;overflow:hidden;">-->
+<!--                        <div class="sliderArea">-->
+<!--                            <ul class="main_banner">-->
+<!--                                <li><a href="#"><img src="/design/hacs36/13548/tem125/main03.jpg" alt=""/></a></li>-->
+<!--                                <li><a href="#"><img src="/design/hacs36/13548/tem125/main01.jpg" alt=""/></a></li>-->
+<!--                                <li><a href="#"><img src="/design/hacs36/13548/tem125/main02.jpg" alt=""/></a></li>-->
+<!--                                <li><a href="#"><img src="/design/hacs36/13548/tem125/main04.jpg" alt=""/></a></li>-->
+<!--                                <li><a href="#"><img src="/design/hacs36/13548/tem125/main05.jpg" alt=""/></a></li>-->
+<!--                            </ul>-->
+<!--                            <div class="pagerWrap">-->
+<!--                                <ul id="mainSliderPager" class="customPager">-->
+<!--                                    <a data-slide-index="0" href="#" class="link"><span class="title">#첫번째 타이틀</span></a>-->
+<!--                                    <a data-slide-index="1" href="#" class="link"><span class="title">#두번째 타이틀</span></a>-->
+<!--                                    <a data-slide-index="2" href="#" class="link"><span class="title">#세번째 타이틀</span></a>-->
+<!--                                    <a data-slide-index="3" href="#" class="link"><span class="title">#네번째 타이틀</span></a>-->
+<!--                                    <a data-slide-index="4" href="#" class="link"><span class="title">#다섯번째 타이틀</span></a>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!-- 메인 슬라이드 배너 끝 -->
+            </div>
+
+        </div>
+        <div id="content">
+            <div class="minSizeWrap">
+                <!-- 메인 신상품 시작 -->
+                <!--/if_recmd_product/-->
+                <div id="newArrivals">
+                    <div class="h_title">
+                        <h3>&#128293;&#128293; 인기 상품 &#128293;&#128293;<span class="subtit">고객님들이 가장 많이 찾아주신 상품들입니다. </span></h3>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="item-cont">
+                            <!--/loop_recmd_product(5)/-->
+                            <dl class="item-list <!--/if_step(5)/-->nomg<!--/end_if/-->">
+                                <dt class="thumb">
+                                    <a href="<!--/recmd_product@link/-->"><img src="<!--/recmd_product@image_l/-->"/></a>
+                                    <!--/if_recmd_product@color/-->
+                                    <div class="clChip">
+                                        <!--/loop_recmd_product@color/-->
+                                        <span style="background:#<!--/recmd_product@color@code/-->"></span>
+                                        <!--/end_loop/-->
+                                    </div>
+                                    <!--/end_if/-->
+                                </dt>
+                                <dd>
+                                    <ul>
+                                        <li class="prd-name"><!--/recmd_product@name/--></li>
+                                        <li class="prd-line"></li>
+                                        <li class="prd-subname"><!--/recmd_product@subname/--></li>
+                                        <li class="prd-price">
+                                            <!--/if_recmd_product@price_replace/-->
+                                            <!--/recmd_product@price_replace/-->
+                                            <!--/else_if_recmd_product@is_soldout/-->
+                                            Sold Out
+                                            <!--/else/-->
+                                            <!--/if_recmd_product@price_discount/-->
+                                            <del><!--/number/recmd_product@price_sell/-->원</del>
+                                            <span><!--/number/recmd_product@price_discount/-->원</span>
+                                            <!--/else/-->
+                                            <!--/if_recmd_product@price_consumer(+1)/-->
+                                            <del><!--/number/recmd_product@price_consumer/-->원</del>
+                                            <!--/end_if/-->
+                                            <span><!--/number/recmd_product@price_sell/-->원</span>
+                                            <!--/end_if/-->
+                                            <!--/end_if/-->
+                                            <!--/if_recmd_product@link_preview/-->
+                                            <p class="prd-preview">
+                                                <a href="<!--/recmd_product@link_preview/-->"><i class="xi-search"></i></a>
+                                            </p>
+                                            <!--/end_if/-->
+                                        </li>
+                                        <li class="prd-ico"><!--/recmd_product@icons/--></li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <!--/if_step(5)/-->
+                        </div>
+                        <div class="item-cont">
+                            <!--/end_if/-->
+                            <!--/end_loop/-->
+                        </div>
+                    </div>
+                </div>
+                <!--/end_if/-->
+                <!-- 메인 신상품 끝 -->
+            </div>
+<!--            &lt;!&ndash; 메인 베스트 탭 상품 시작 &ndash;&gt;-->
+<!--            <div id="tabProduct">-->
+<!--                <div class="minSizeWrap">-->
+<!--                    <div class="h_title">-->
+<!--                        <h3>브랜드별 상품 <span class="subtit">BRAND PRODUCT</span></h3>-->
+<!--                    </div>-->
+<!--                    <div class="item-wrap">-->
+<!--                        <div class="newCate_prod">-->
+<!--                            <ul id="newCatePageThumb" class="newCateTab">-->
+<!--                                <li class="t1 slideList"><a data-slide-index="0" href="#">내가 찾던 브랜드 바로 여기에~</a></li>-->
+<!--                                <li class="t2 slideList"><a data-slide-index="1" href="#">내가 찾던 브랜드 바로 여기에~</a></li>-->
+<!--                                <li class="t3 slideList"><a data-slide-index="2" href="#">내가 찾던 브랜드 바로 여기에~</a></li>-->
+<!--                            </ul>-->
+<!--                            <div class="newCateList">-->
+<!--                                <ul class="newCateSlider">-->
+<!--                                    <li class="slideList">-->
+<!--                                        <div class="item-cont">-->
+<!--                                            <ul>-->
+<!--                                                &lt;!&ndash;/loop_add1_product(10)/&ndash;&gt;-->
+<!--                                                <li class="itemWrap">-->
+<!--                                                    <a href="&lt;!&ndash;/add1_product@link/&ndash;&gt;">-->
+<!--                                                        <div class="thumb"><img src="&lt;!&ndash;/add1_product@image_l/&ndash;&gt;"/></div>-->
+<!--                                                        <div class="prd-info-bx">-->
+<!--                                                            <div class="prd-info">-->
+<!--                                                                &lt;!&ndash;/if_add1_product@color/&ndash;&gt;-->
+<!--                                                                <p class="clChip">-->
+<!--                                                                    &lt;!&ndash;/loop_add1_product@color/&ndash;&gt;-->
+<!--                                                                    <span style="background:#&lt;!&ndash;/add1_product@color@code/&ndash;&gt;"></span>-->
+<!--                                                                    &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                <p class="prd-name">&lt;!&ndash;/add1_product@name/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-subname">&lt;!&ndash;/add1_product@subname/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-price">-->
+<!--                                                                    &lt;!&ndash;/if_add1_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/add1_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/else_if_add1_product@is_soldout/&ndash;&gt;-->
+<!--                                                                    Sold Out-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add1_product@price_discount/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add1_product@price_sell/&ndash;&gt;원</del>-->
+<!--                                                                    <span>&lt;!&ndash;/number/add1_product@price_discount/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add1_product@price_consumer(+1)/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add1_product@price_consumer/&ndash;&gt;원</del>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    <span>&lt;!&ndash;/number/add1_product@price_sell/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/if_add1_product@link_preview/&ndash;&gt;-->
+<!--                                                                <p class="prd-preview">-->
+<!--                                                                    <a href="&lt;!&ndash;/add1_product@link_preview/&ndash;&gt;"><i class="xi-search"></i></a>-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                            <p class="bg"></p>-->
+<!--                                                        </div>-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li class="slideList">-->
+<!--                                        <div class="item-cont">-->
+<!--                                            <ul>-->
+<!--                                                &lt;!&ndash;/loop_add2_product(10)/&ndash;&gt;-->
+<!--                                                <li class="itemWrap">-->
+<!--                                                    <a href="&lt;!&ndash;/add2_product@link/&ndash;&gt;">-->
+<!--                                                        <div class="thumb"><img src="&lt;!&ndash;/add2_product@image_l/&ndash;&gt;"/></div>-->
+<!--                                                        <div class="prd-info-bx">-->
+<!--                                                            <div class="prd-info">-->
+<!--                                                                &lt;!&ndash;/if_add2_product@color/&ndash;&gt;-->
+<!--                                                                <p class="clChip">-->
+<!--                                                                    &lt;!&ndash;/loop_add2_product@color/&ndash;&gt;-->
+<!--                                                                    <span style="background:#&lt;!&ndash;/add2_product@color@code/&ndash;&gt;"></span>-->
+<!--                                                                    &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                <p class="prd-name">&lt;!&ndash;/add2_product@name/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-subname">&lt;!&ndash;/add2_product@subname/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-price">-->
+<!--                                                                    &lt;!&ndash;/if_add2_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/add2_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/else_if_add2_product@is_soldout/&ndash;&gt;-->
+<!--                                                                    Sold Out-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add2_product@price_discount/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add2_product@price_sell/&ndash;&gt;원</del>-->
+<!--                                                                    <span>&lt;!&ndash;/number/add2_product@price_discount/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add2_product@price_consumer(+1)/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add2_product@price_consumer/&ndash;&gt;원</del>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    <span>&lt;!&ndash;/number/add2_product@price_sell/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/if_add2_product@link_preview/&ndash;&gt;-->
+<!--                                                                <p class="prd-preview">-->
+<!--                                                                    <a href="&lt;!&ndash;/add2_product@link_preview/&ndash;&gt;"><i class="xi-search"></i></a>-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                            <p class="bg"></p>-->
+<!--                                                        </div>-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li class="slideList">-->
+<!--                                        <div class="item-cont">-->
+<!--                                            <ul>-->
+<!--                                                &lt;!&ndash;/loop_add3_product(10)/&ndash;&gt;-->
+<!--                                                <li class="itemWrap">-->
+<!--                                                    <a href="&lt;!&ndash;/add3_product@link/&ndash;&gt;">-->
+<!--                                                        <div class="thumb"><img src="&lt;!&ndash;/add3_product@image_l/&ndash;&gt;"/></div>-->
+<!--                                                        <div class="prd-info-bx">-->
+<!--                                                            <div class="prd-info">-->
+<!--                                                                &lt;!&ndash;/if_add3_product@color/&ndash;&gt;-->
+<!--                                                                <p class="clChip">-->
+<!--                                                                    &lt;!&ndash;/loop_add3_product@color/&ndash;&gt;-->
+<!--                                                                    <span style="background:#&lt;!&ndash;/add3_product@color@code/&ndash;&gt;"></span>-->
+<!--                                                                    &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                <p class="prd-name">&lt;!&ndash;/add3_product@name/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-subname">&lt;!&ndash;/add3_product@subname/&ndash;&gt;</p>-->
+<!--                                                                <p class="prd-price">-->
+<!--                                                                    &lt;!&ndash;/if_add3_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/add3_product@price_replace/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/else_if_add3_product@is_soldout/&ndash;&gt;-->
+<!--                                                                    Sold Out-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add3_product@price_discount/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add3_product@price_sell/&ndash;&gt;원</del>-->
+<!--                                                                    <span>&lt;!&ndash;/number/add3_product@price_discount/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/if_add3_product@price_consumer(+1)/&ndash;&gt;-->
+<!--                                                                    <del>&lt;!&ndash;/number/add3_product@price_consumer/&ndash;&gt;원</del>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    <span>&lt;!&ndash;/number/add3_product@price_sell/&ndash;&gt;원</span>-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/if_add3_product@link_preview/&ndash;&gt;-->
+<!--                                                                <p class="prd-preview">-->
+<!--                                                                    <a href="&lt;!&ndash;/add3_product@link_preview/&ndash;&gt;"><i class="xi-search"></i></a>-->
+<!--                                                                </p>-->
+<!--                                                                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                                            </div>-->
+<!--                                                            <p class="bg"></p>-->
+<!--                                                        </div>-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+<!--                                                &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>&lt;!&ndash; //newCateList &ndash;&gt;-->
+<!--                        </div>&lt;!&ndash; //newCate_prod &ndash;&gt;-->
+<!--                    </div>&lt;!&ndash; //item-wrap &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; 메인 베스트 탭 상품 끝 &ndash;&gt;-->
+<!--            </div>-->
+<!--            <div class="minSizeWrap">-->
+<!--                &lt;!&ndash;/if_special_product/&ndash;&gt;-->
+<!--                <div id="specialItem">-->
+<!--                    <div class="h_title">-->
+<!--                        <h3>세일상품 <span class="subtit">SALE PRODUCT</span></h3>-->
+<!--                    </div>-->
+<!--                    <div class="item-wrap">-->
+<!--                        <div class="item-cont">-->
+<!--                            &lt;!&ndash;/loop_special_product(8)/&ndash;&gt;-->
+<!--                            <dl class="item-list &lt;!&ndash;/if_step(4)/&ndash;&gt;nomg&lt;!&ndash;/end_if/&ndash;&gt;">-->
+<!--                                <dt class="thumb">-->
+<!--                                    <a href="&lt;!&ndash;/special_product@link/&ndash;&gt;"><img src="&lt;!&ndash;/special_product@image_l/&ndash;&gt;"/></a>-->
+<!--                                    &lt;!&ndash;/if_special_product@color/&ndash;&gt;-->
+<!--                                    <div class="clChip">-->
+<!--                                        &lt;!&ndash;/loop_special_product@color/&ndash;&gt;-->
+<!--                                        <span style="background:#&lt;!&ndash;/special_product@color@code/&ndash;&gt;"></span>-->
+<!--                                        &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                </dt>-->
+<!--                                <dd>-->
+<!--                                    <ul>-->
+<!--                                        <li class="prd-name">&lt;!&ndash;/special_product@name/&ndash;&gt;</li>-->
+<!--                                        <li class="prd-line"></li>-->
+<!--                                        <li class="prd-subname">&lt;!&ndash;/special_product@subname/&ndash;&gt;</li>-->
+<!--                                        <li class="prd-price">-->
+<!--                                            &lt;!&ndash;/if_special_product@price_replace/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/special_product@price_replace/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/else_if_special_product@is_soldout/&ndash;&gt;-->
+<!--                                            Sold Out-->
+<!--                                            &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_special_product@price_discount/&ndash;&gt;-->
+<!--                                            <del>&lt;!&ndash;/number/special_product@price_sell/&ndash;&gt;원</del>-->
+<!--                                            <span>&lt;!&ndash;/number/special_product@price_discount/&ndash;&gt;원</span>-->
+<!--                                            &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_special_product@price_consumer(+1)/&ndash;&gt;-->
+<!--                                            <del>&lt;!&ndash;/number/special_product@price_consumer/&ndash;&gt;원</del>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            <span>&lt;!&ndash;/number/special_product@price_sell/&ndash;&gt;원</span>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_special_product@link_preview/&ndash;&gt;-->
+<!--                                            <p class="prd-preview">-->
+<!--                                                <a href="&lt;!&ndash;/special_product@link_preview/&ndash;&gt;"><i class="xi-search"></i></a>-->
+<!--                                            </p>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                        </li>-->
+<!--                                        <li class="prd-ico">&lt;!&ndash;/special_product@icons/&ndash;&gt;</li>-->
+<!--                                    </ul>-->
+<!--                                </dd>-->
+<!--                            </dl>-->
+<!--                            &lt;!&ndash;/if_step(4)/&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="item-cont">-->
+<!--                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                            &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;/end_if/&ndash;&gt;-->
+
+<!--                &lt;!&ndash; 메인 추천상품 시작 &ndash;&gt;-->
+<!--                &lt;!&ndash;/if_recmd_product/&ndash;&gt;-->
+<!--                <div id="">-->
+<!--                    <div class="h_title">-->
+<!--                        <h3>베스트상품 <span class="subtit">BEST PRODUCT</span></h3>-->
+<!--                    </div>-->
+<!--                    <div class="item-wrap">-->
+<!--                        <div class="item-cont">-->
+<!--                            &lt;!&ndash;/loop_recmd_product(12)/&ndash;&gt;-->
+<!--                            <dl class="item-list &lt;!&ndash;/if_step(4)/&ndash;&gt;nomg&lt;!&ndash;/end_if/&ndash;&gt;">-->
+<!--                                <dt class="thumb">-->
+<!--                                    <a href="&lt;!&ndash;/recmd_product@link/&ndash;&gt;"><img src="&lt;!&ndash;/recmd_product@image_l/&ndash;&gt;"/></a>-->
+<!--                                    &lt;!&ndash;/if_recmd_product@color/&ndash;&gt;-->
+<!--                                    <div class="clChip">-->
+<!--                                        &lt;!&ndash;/loop_recmd_product@color/&ndash;&gt;-->
+<!--                                        <span style="background:#&lt;!&ndash;/recmd_product@color@code/&ndash;&gt;"></span>-->
+<!--                                        &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                    &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                </dt>-->
+<!--                                <dd>-->
+<!--                                    <ul>-->
+<!--                                        <li class="prd-name">&lt;!&ndash;/recmd_product@name/&ndash;&gt;</li>-->
+<!--                                        <li class="prd-line"></li>-->
+<!--                                        <li class="prd-subname">&lt;!&ndash;/recmd_product@subname/&ndash;&gt;</li>-->
+<!--                                        <li class="prd-price">-->
+<!--                                            &lt;!&ndash;/if_recmd_product@price_replace/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/recmd_product@price_replace/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/else_if_recmd_product@is_soldout/&ndash;&gt;-->
+<!--                                            Sold Out-->
+<!--                                            &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_recmd_product@price_discount/&ndash;&gt;-->
+<!--                                            <del>&lt;!&ndash;/number/recmd_product@price_sell/&ndash;&gt;원</del>-->
+<!--                                            <span>&lt;!&ndash;/number/recmd_product@price_discount/&ndash;&gt;원</span>-->
+<!--                                            &lt;!&ndash;/else/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_recmd_product@price_consumer(+1)/&ndash;&gt;-->
+<!--                                            <del>&lt;!&ndash;/number/recmd_product@price_consumer/&ndash;&gt;원</del>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            <span>&lt;!&ndash;/number/recmd_product@price_sell/&ndash;&gt;원</span>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                            &lt;!&ndash;/if_recmd_product@link_preview/&ndash;&gt;-->
+<!--                                            <p class="prd-preview">-->
+<!--                                                <a href="&lt;!&ndash;/recmd_product@link_preview/&ndash;&gt;"><i class="xi-search"></i></a>-->
+<!--                                            </p>-->
+<!--                                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                                        </li>-->
+<!--                                        <li class="prd-ico">&lt;!&ndash;/recmd_product@icons/&ndash;&gt;</li>-->
+<!--                                    </ul>-->
+<!--                                </dd>-->
+<!--                            </dl>-->
+<!--                            &lt;!&ndash;/if_step(4)/&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="item-cont">-->
+<!--                            &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                            &lt;!&ndash;/end_loop/&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;/end_if/&ndash;&gt;-->
+<!--                &lt;!&ndash; 메인 추천상품 끝 &ndash;&gt;-->
+
+<!--            </div>&lt;!&ndash; #content &ndash;&gt;-->
+        </div><!-- #contentWrap -->
+    </div><!-- #contentWrapper -->
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->
