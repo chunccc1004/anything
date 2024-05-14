@@ -393,6 +393,24 @@
     padding-left: 20px;
 }
 
+.item-wrap .item-cont .item-list .thumb {
+    position: relative;
+    height: 350px;
+}
+
+.item-wrap .item-cont .item-list .thumb a img {
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    position: absolute;
+    max-height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s ease;
+}
+
 /* special item */
 #specialItem .item-wrap .item-cont .item-list {
 }
