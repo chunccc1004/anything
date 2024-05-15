@@ -253,6 +253,19 @@
     height: 4px;
 }
 
+.item-wrap .item-cont .item-list .prd-name {
+    padding: 5px 0 10px;
+    font-size: 18px;
+}
+
+#my-prd-price {
+    padding: 7px 0 3px;
+    font-size: 20px;
+    color: #111;
+    font-weight: bold;
+    position: relative;
+}
+
 #tabProduct .newCate_prod .prd-info-bx .prd-name {
     font-size: 14px;
 }
